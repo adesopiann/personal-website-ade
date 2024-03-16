@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ade Sopian | Personal Website</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="src/assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+
+    <style>
+      body[data-aos-duration="10000"] [data-aos],
+      [data-aos][data-aos][data-aos-duration="10000"] {
+        transition-duration: 10000ms;
+      }
+
+      body[data-aos-duration="5000"] [data-aos],
+      [data-aos][data-aos][data-aos-duration="5000"] {
+        transition-duration: 5000ms;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="fixed z-[9999] w-full lg:pb-20 lg:top-0 pb-6 border-b-[1px] backdrop-blur-md border-gray-200 bg-white bg-opacity-30">
+      <div class="container">
+        <span id="toggleBtn" class="lg:hidden cursor-pointer">
+          <svg class="mt-6 hover:scale-125 transition-all duration-150" width="28" height="28" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.64645 1.64645C3.84171 1.45118 4.15829 1.45118 4.35355 1.64645L10.3536 7.64645C10.5488 7.84171 10.5488 8.15829 10.3536 8.35355L4.35355 14.3536C4.15829 14.5488 3.84171 14.5488 3.64645 14.3536C3.45118 14.1583 3.45118 13.8417 3.64645 13.6464L9.29289 8L3.64645 2.35355C3.45118 2.15829 3.45118 1.84171 3.64645 1.64645Z"
+              fill="black"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.64645 1.64645C7.84171 1.45118 8.15829 1.45118 8.35355 1.64645L14.3536 7.64645C14.5488 7.84171 14.5488 8.15829 14.3536 8.35355L8.35355 14.3536C8.15829 14.5488 7.84171 14.5488 7.64645 14.3536C7.45118 14.1583 7.45118 13.8417 7.64645 13.6464L13.2929 8L7.64645 2.35355C7.45118 2.15829 7.45118 1.84171 7.64645 1.64645Z"
+              fill="black"
+            />
+          </svg>
+        </span>
+
+        <div id="navbar" class="hidden mt-6 lg:mt-1 py-4 px-4 lg:bg-transparent bg-white border-[1px] rounded-lg w-1/2 ] absolute z-20 lg:left-0 left-[12%] lg:border-none lg:flex">
+          <ul class="lg:flex">
+            <a href="index.html#home"
+              ><li
+                class="font-semibold mt-3 lg:mt-2 hover:scale-110 transition-all duration-200 lg:mx-6"
+              >
+                Home
+              </li></a
+            >
+            <a href="index.html#about"
+              ><li
+                class="font-semibold my-3 lg:mt-2 hover:scale-110 transition-all duration-200 lg:mx-6 "
+              >
+                About
+              </li></a
+            >
+            <a href="contact.html"
+              ><li
+                class="font-semibold mb-3 lg:mt-2 hover:scale-110 transition-all duration-200 lg:mx-6 after:h-[2px] "
+              >
+                Contact
+              </li></a
+            >
+          </ul>
+
+          <ul class="flex mb-3 lg:left-[138%] lg:mt-2 lg:relative">
+            <li class="mx-2 hover:scale-110 transition-all duration-200 after:h-[2px] after:w-[0%] ">
+              <a href="index.html#skills"><img src="src/assets/iconHeader/skills.png" width="30" alt="" /></a>
+            </li>
+            <li class="mx-2 hover:scale-110 transition-all duration-200 after:h-[2px] after:w-[0%] ">
+              <a href="index.html#certificate"><img src="src/assets/iconHeader/certificat.png" width="30" alt="" /></a>
+            </li>
+            <li class="mx-2 hover:scale-110 transition-all duration-200 after:h-[2px] after:w-[0%] ">
+              <a href="index.html#project"><img src="src/assets/iconHeader/project (2).png" width="30" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section id="contact" class="py-52">
+      <div class="container">
+        <div class="lg:flex">
+          <div class="mx-4 lg:ms-[12rem]">
+            <span>
+              <svg class="animate-bounce" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chat-left-text" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+              </svg>
+            </span>
+
+            <h1 id="txtContact" class="font-bold text-5xl" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)">Contact Me</h1>
+            <h4 class="font-medium text-gray-600 mt-3 lg:w-[25rem]" data-aos="fade-right" data-aos-duration="2000">Feel free to contact me any time. We will get back to you as soon as i can.</h4>
+
+            <div class="my-alert hidden mt-6 container" id="alertbox">
+              <div class= "container rounded-lg bg-green-100 flex items-center text-green-700 text-sm font-bold lg:pe-14 pe-4 py-3 relative"
+                role="alert">
+                <svg class="w-5 h-5 inline mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                <p>Thank you! <span class="font-normal">We have receive your message</span></p>
+
+                <span class="absolute top-0 bottom-0 right-0 lg:ps-8 pe-2 py-3 closealertbutton">
+                  <svg class="fill-current h-6 w-6 text-green-800" role="button" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <title>Close</title>
+                    <path
+                      d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-2 py-4">
+              <form name="submit-to-google-sheet" action="" data-aos="fade-in" data-aos-duration="5000">
+                <div class="mt-3">
+                  <label class="font-bold text-xl" for="name">Name</label><br />
+                  <input class="border-b-[1px] border-0 w-full border-gray-950 py-3 focus:outline-none" type="text" id="name" name="name" required /><br />
+                </div>
+
+                <div class="mt-4">
+                  <label class="font-bold text-xl" for="email">Email</label><br />
+                  <input class="border-b-[1px] w-full border-gray-950 py-3 focus:outline-none" type="email" name="email" id="email" required /><br />
+                </div>
+
+                <div class="mt-4">
+                  <label class="font-bold text-xl" for="phoneNum">Phone Number</label><br />
+                  <input class="border-b-[1px] w-full border-gray-950 py-3 focus:outline-none" type="number" name="phoneNum" id="phoneNum" required /><br />
+                </div>
+
+                <div class="mt-4">
+                  <label class="font-bold text-xl" for="message">Message</label><br />
+                  <textarea class="border-b-[1px] w-full border-gray-950 pt-3 px-3 focus:outline-none" name="message" id="message" placeholder="What can I do for You?" required></textarea>
+                </div>
+
+                <button type="button" class="btn-loading hidden absolute mt-3 bg-white shadow-xl border-[1px] border-gray-200 h-max w-max rounded-lg text-gray-600 font-semibold hover:scale-110 hover:cursor-not-allowed duration-[500ms,800ms]" disabled>
+                    <div class="flex items-center justify-center m-[10px]"> 
+                        <div class="h-5 w-5 border-t-transparent border-solid animate-spin rounded-full border-gray-600 border-4"></div>
+                        <div class="ml-2 "> Processing... <div>
+                    </div>
+                </button>
+
+                <button type="submit" class="btn-kirim font-semibold text-xl flex mt-4 py-2 px-6 bg-white shadow-xl rounded-md w-1/3 hover:scale-110 transition-all duration-150 ease-in-out">
+                  Send
+                  <span class="mt-[5px] ms-3">
+                    <svg class="animate-bounce" width="23" height="23" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M29.7254 0.274584C29.9906 0.539768 30.0722 0.937472 29.9329 1.28568L19.0226 28.5615C18.597 29.6255 17.1457 29.761 16.5305 28.7942L10.5709 19.4291L1.20574 13.4695C0.238964 12.8542 0.374476 11.403 1.43845 10.9774L28.7143 0.0670499C29.0625 -0.0722314 29.4602 0.00940052 29.7254 0.274584ZM12.4446 18.8811L17.6214 27.016L26.4957 4.83007L12.4446 18.8811ZM25.1699 3.50424L2.98399 12.3786L11.1188 17.5553L25.1699 3.50424Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="mx-4 mt-16 lg:mt-32 lg:ms-[15rem]">
+            <div class="w-[250px] h-[250px] absolute translate-y-[30%] bg-primary rounded-[100%] blur-[25px]"></div>
+            <div class="w-[100px] h-[100px] absolute left-[70%] bg-secondary rounded-[100%] blur-[20px]"></div>
+
+            <div class="relative bg-white/40 py-10 px-10 rounded-lg border-[0.01px] border-gray-200" data-aos="fade-in" data-aos-duration="5000">
+              <h1 id="txtInfo" class="font-bold text-4xl mb-6" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)">Info</h1>
+
+              <div class="flex my-12">
+                <span>
+                  <svg width="30" height="30" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2C0 0.895431 0.895431 0 2 0H14C15.1046 0 16 0.89543 16 2V10C16 11.1046 15.1046 12 14 12H2C0.895431 12 0 11.1046 0 10V2ZM2 1C1.44772 1 1 1.44772 1 2V2.2169L8 6.4169L15 2.2169V2C15 1.44772 14.5523 1 14 1H2ZM15 3.3831L10.2919 6.20794L15 9.10522V3.3831ZM14.9662 10.2586L9.32583 6.7876L8 7.5831L6.67417 6.7876L1.03376 10.2586C1.14774 10.6855 1.53715 11 2 11H14C14.4628 11 14.8523 10.6855 14.9662 10.2586ZM1 9.10522L5.70808 6.20794L1 3.3831V9.10522Z"
+                      fill="black"
+                    />
+                  </svg>
+                </span>
+                <h4 class="font-semibold text-lg ms-6">adesopian884@gmail.com</h4>
+              </div>
+
+              <div class="flex my-12">
+                <span>
+                  <svg width="30" height="30" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M38.2537 6.54312C34.052 2.32003 28.4497 0 22.4839 0C10.1996 0 0.192444 10.0071 0.181753 22.2915C0.181753 26.2259 1.20812 30.0535 3.15395 33.4426L0 45L11.8246 41.8995C15.0855 43.6743 18.7526 44.6151 22.4839 44.6151H22.4946C34.779 44.6151 44.7861 34.608 44.7968 22.3129C44.7861 16.3578 42.4661 10.7555 38.2537 6.54312ZM22.4839 40.8411C19.1482 40.8411 15.8874 39.943 13.0435 38.2537L12.3699 37.8475L5.35637 39.6864L7.22736 32.8439L6.78901 32.1383C4.92871 29.1875 3.9558 25.7769 3.9558 22.2808C3.9558 12.0813 12.2737 3.76336 22.4946 3.76336C27.4447 3.76336 32.0954 5.6985 35.6022 9.19458C39.0983 12.7014 41.0227 17.3521 41.0227 22.3022C41.012 32.5339 32.6942 40.8411 22.4839 40.8411ZM32.6514 26.9637C32.0954 26.6857 29.3585 25.3386 28.8453 25.1461C28.3321 24.9644 27.9579 24.8681 27.5944 25.4241C27.2202 25.98 26.1511 27.2416 25.8303 27.6051C25.5096 27.9793 25.1781 28.0221 24.6222 27.7441C24.0662 27.4661 22.2701 26.8781 20.1425 24.9751C18.4854 23.4996 17.3735 21.6714 17.042 21.1155C16.7213 20.5595 17.0099 20.2602 17.2879 19.9822C17.5338 19.7363 17.8439 19.33 18.1218 19.0093C18.3998 18.6885 18.496 18.4533 18.6778 18.0791C18.8596 17.7049 18.774 17.3842 18.635 17.1062C18.496 16.8282 17.3841 14.0805 16.9137 12.9686C16.4647 11.8781 16.005 12.0278 15.6628 12.0171C15.3421 11.9957 14.9679 11.9957 14.5937 11.9957C14.2195 11.9957 13.6208 12.1347 13.1076 12.6907C12.5944 13.2466 11.1618 14.5937 11.1618 17.3414C11.1618 20.0891 13.1611 22.7299 13.439 23.1041C13.717 23.4783 17.3628 29.1019 22.9543 31.5182C24.2801 32.0955 25.3171 32.4376 26.1297 32.6942C27.4661 33.1219 28.6742 33.0577 29.6364 32.9187C30.7056 32.7584 32.9294 31.5716 33.3998 30.2673C33.8595 28.9629 33.8595 27.851 33.7205 27.6158C33.5815 27.3806 33.2073 27.2416 32.6514 26.9637Z"
+                      fill="black"
+                    />
+                  </svg>
+                </span>
+                <h4 class="font-semibold text-lg ms-6">+62 821 2149 3226</h4>
+              </div>
+
+              <div class="flex my-12">
+                <span>
+                  <svg width="35" height="35" viewBox="0 0 35 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M29.2162 25.1431C27.7424 28.1292 25.7475 31.1065 23.7037 33.7782C21.6662 36.4416 19.6218 38.7473 18.0841 40.3888C17.8798 40.607 17.6847 40.8131 17.5 41.0065C17.3153 40.8131 17.1202 40.607 16.9159 40.3888C15.3782 38.7473 13.3338 36.4416 11.2963 33.7782C9.25246 31.1065 7.25757 28.1292 5.78377 25.1431C4.29476 22.1261 3.4375 19.2991 3.4375 16.875C3.4375 9.1085 9.7335 2.8125 17.5 2.8125C25.2665 2.8125 31.5625 9.1085 31.5625 16.875C31.5625 19.2991 30.7052 22.1261 29.2162 25.1431ZM17.5 45C17.5 45 34.375 29.0073 34.375 16.875C34.375 7.55519 26.8198 0 17.5 0C8.18019 0 0.625 7.55519 0.625 16.875C0.625 29.0073 17.5 45 17.5 45Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M17.5 22.5C14.3934 22.5 11.875 19.9816 11.875 16.875C11.875 13.7684 14.3934 11.25 17.5 11.25C20.6066 11.25 23.125 13.7684 23.125 16.875C23.125 19.9816 20.6066 22.5 17.5 22.5ZM17.5 25.3125C22.1599 25.3125 25.9375 21.5349 25.9375 16.875C25.9375 12.2151 22.1599 8.4375 17.5 8.4375C12.8401 8.4375 9.0625 12.2151 9.0625 16.875C9.0625 21.5349 12.8401 25.3125 17.5 25.3125Z"
+                      fill="black"
+                    />
+                  </svg>
+                </span>
+                <h4 class="font-semibold text-lg ms-6">Majalengka, West Java, Indonesia</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-24">
+      <div class="container">
+        <div class="pb-4">
+          <h1 class="font-semibold text-gray-400 text-center">All Rights Reserved | Ade Sopian</h1>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">
+    </script>
+    <script>
+      AOS.init();
+
+      let txtContact = new SplitType("#txtContact");
+      let txtInfo = new SplitType("#txtInfo");
+
+      let character = document.querySelectorAll(".char");
+
+      for (i = 0; i < character.length; i++) {
+        character[i].classList.add("translate-y-full");
+      }
+
+      gsap.to(".char", {
+        y: 0,
+        stagger: 0.09,
+        delay: 0.2,
+        duration: 0.5,
+      });
+
+      // Contact Form Event
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzXu0_-IfnEHwLiWvw13jPyszoMyls4Xaeo1jqaqlmbLd0kW_RxG7EdIu59zEhF2syjvg/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert =document.querySelector('.my-alert')
+      
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        //  ketika tombol send diklik
+        //  tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle('hidden');
+        btnKirim.classList.toggle('hidden');
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+              //  ketika tombol send diklik
+             //  tampilkan tombol send, hilangkan tombol loading
+            btnLoading.classList.toggle('hidden');
+            btnKirim.classList.toggle('hidden');
+
+            //  tampilkan alert
+            myAlert.classList.toggle('hidden')
+            
+            // mereset form
+            form.reset();
+
+            console.log("Success!", response)})
+          .catch((error) => console.error("Error!", error.message));
+      });
+
+            $(".closealertbutton").click(function (e) {
+          // $('.alertbox')[0].hide()
+          //  e.preventDefault();
+          pid = $(this).parent().parent().hide(500)
+          console.log(pid)
+        // $(".alertbox", this).hide()
+      })
+    </script>
+  </body>
+</html>

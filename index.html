@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ade Sopian | Personal Website</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" href="src/assets/icon.png" type="image/x-icon">
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+
+    <style>
+      body[data-aos-duration="10000"] [data-aos],
+      [data-aos][data-aos][data-aos-duration="10000"] {
+        transition-duration: 10000ms;
+      }
+
+      body[data-aos-duration="5000"] [data-aos],
+      [data-aos][data-aos][data-aos-duration="5000"] {
+        transition-duration: 5000ms;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="fixed z-[9999] w-full lg:pb-20 lg:top-0 pb-6 border-b-[1px] backdrop-blur-md border-gray-200 bg-white bg-opacity-30">
+      <div class="container">
+        <span id="toggleBtn" class="lg:hidden cursor-pointer">
+          <svg class="mt-6 hover:scale-125 transition-all duration-150" width="28" height="28" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.64645 1.64645C3.84171 1.45118 4.15829 1.45118 4.35355 1.64645L10.3536 7.64645C10.5488 7.84171 10.5488 8.15829 10.3536 8.35355L4.35355 14.3536C4.15829 14.5488 3.84171 14.5488 3.64645 14.3536C3.45118 14.1583 3.45118 13.8417 3.64645 13.6464L9.29289 8L3.64645 2.35355C3.45118 2.15829 3.45118 1.84171 3.64645 1.64645Z"
+              fill="black"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.64645 1.64645C7.84171 1.45118 8.15829 1.45118 8.35355 1.64645L14.3536 7.64645C14.5488 7.84171 14.5488 8.15829 14.3536 8.35355L8.35355 14.3536C8.15829 14.5488 7.84171 14.5488 7.64645 14.3536C7.45118 14.1583 7.45118 13.8417 7.64645 13.6464L13.2929 8L7.64645 2.35355C7.45118 2.15829 7.45118 1.84171 7.64645 1.64645Z"
+              fill="black"
+            />
+          </svg>
+        </span>
+
+        <div id="navbar" class="hidden mt-6 lg:mt-1 py-4 px-4 lg:bg-transparent bg-white border-[1px] rounded-lg w-1/2 ] absolute z-20 lg:left-0 left-[12%] lg:border-none lg:flex">
+          <ul class="lg:flex">
+            <a href="#home"><li class="font-semibold mt-3 lg:mt-2 hover:scale-105 transition-all duration-200 lg:mx-6">Home</li></a>
+            <a href="#about"><li class="font-semibold my-3 lg:mt-2 hover:scale-105 transition-all duration-200 lg:mx-6">About</li></a>
+            <a href="contact.html"><li class="font-semibold mb-3 lg:mt-2 hover:scale-105 transition-all duration-200 lg:mx-6">Contact</li></a>
+          </ul>
+
+          <ul class="flex mb-3 lg:left-[145%] lg:mt-2 lg:relative">
+            <li class="mx-2 hover:scale-110 transition-all duration-200">
+              <a href="#skills"><img src="src/assets/iconHeader/skills.png" width="30" alt="" /></a>
+            </li>
+            <li class="mx-2 hover:scale-105 transition-all duration-200">
+              <a href="#certificate"><img src="src/assets/iconHeader/certificat.png" width="30" alt="" /></a>
+            </li>
+            <li class="mx-2 hover:scale-105 transition-all duration-200">
+              <a href="#project"><img src="src/assets/iconHeader/project (2).png" width="30" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section id="home" class="mx-4 mb-36 pt-80">
+      <div class="particle">
+        <div class="animate-pulse w-[270px] h-[270px] bg-primary absolute rounded-[100%] -z-20 top-[40%] left-[30%] lg:left-[45%] translate-x-[-50%] translate-y-[-20%] blur-[50px]"></div>
+
+        <div class="animate-pulse w-[85px] h-[85px] bg-secondary absolute -z-20 rounded-[100%] top-[20%] blur-[20px] left-[60%] lg:left-[65%] lg:translate-x-[-180%]"></div>
+
+        <div class="animate-pulse w-[50px] h-[50px] bg-secondary absolute -z-20 rounded-[100%] top-[50%] blur-[20px] left-[80%] lg:left-[65%]"></div>
+      </div>
+
+      <div class="mx-4 z-[100] lg:text-center">
+        <h3 class="font-bold text-3xl mb-1 lg:text-4xl" data-aos="fade-in" data-aos-duration="10000">Hi, I'm</h3>
+        <div class="">
+          <h1 id="text" class="font-bold mb-2 lg:my-1 text-5xl lg:text-6x hover:text-6xl transition-all ease-in-out duration-300" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)">Ade Sopian</h1>
+        </div>
+        <h5 class="font-normal text-base mb-1" data-aos="fade-in" data-aos-duration="10000">A <span id="typed" class="font-medium">Web Developer</span> who will help you create a responsive and high-quality website.</h5>
+      </div>
+
+      <div class="flex lg:justify-center">
+        <div class="ms-4 me-4 mt-1">
+          <a href="https://github.com/adesopiann" target="_blank">
+            <svg data-aos="fade-up" data-aos-duration="3000" class="hover:w-[32px] transition-all duration-200 ease-in-out" width="30" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_8_2)">
+                <path
+                  d="M20 0C8.95 0 0 8.95 0 20C0 28.85 5.725 36.325 13.675 38.975C14.675 39.15 15.05 38.55 15.05 38.025C15.05 37.55 15.025 35.975 15.025 34.3C10 35.225 8.7 33.075 8.3 31.95C8.075 31.375 7.1 29.6 6.25 29.125C5.55 28.75 4.55 27.825 6.225 27.8C7.8 27.775 8.925 29.25 9.3 29.85C11.1 32.875 13.975 32.025 15.125 31.5C15.3 30.2 15.825 29.325 16.4 28.825C11.95 28.325 7.3 26.6 7.3 18.95C7.3 16.775 8.075 14.975 9.35 13.575C9.15 13.075 8.45 11.025 9.55 8.275C9.55 8.275 11.225 7.75 15.05 10.325C16.65 9.875 18.35 9.65 20.05 9.65C21.75 9.65 23.45 9.875 25.05 10.325C28.875 7.725 30.55 8.275 30.55 8.275C31.65 11.025 30.95 13.075 30.75 13.575C32.025 14.975 32.8 16.75 32.8 18.95C32.8 26.625 28.125 28.325 23.675 28.825C24.4 29.45 25.025 30.65 25.025 32.525C25.025 35.2 25 37.35 25 38.025C25 38.55 25.375 39.175 26.375 38.975C30.3454 37.6346 33.7954 35.0829 36.2396 31.6791C38.6838 28.2752 39.9989 24.1905 40 20C40 8.95 31.05 0 20 0Z"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_8_2">
+                  <rect width="40" height="40" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+
+        <div class="mx-4 mt-1">
+          <a href="https://www.instagram.com/adespiann/" target="_blank">
+            <svg data-aos="fade-up" data-aos-duration="3000" class="cursor-pointer hover:w-[32px] transition-all duration-200 ease-in-out" width="30" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.0019 0C14.5702 0 13.8885 0.0237506 11.7551 0.120835C9.62593 0.218336 8.17259 0.555423 6.90091 1.05001C5.58547 1.56085 4.46963 2.24419 3.35795 3.35629C2.24544 4.46796 1.5621 5.58381 1.04959 6.89882C0.553755 8.17092 0.216252 9.62468 0.120418 11.753C0.0250001 13.8864 0 14.5685 0 20.0002C0 25.4319 0.0241673 26.1115 0.120835 28.2449C0.218753 30.3741 0.555839 31.8274 1.05001 33.0991C1.56127 34.4145 2.24461 35.5304 3.3567 36.642C4.46796 37.7546 5.58381 38.4396 6.89841 38.9504C8.17092 39.445 9.62468 39.7821 11.7535 39.8796C13.8868 39.9767 14.5681 40.0004 19.9994 40.0004C25.4315 40.0004 26.1111 39.9767 28.2445 39.8796C30.3737 39.7821 31.8287 39.445 33.1012 38.9504C34.4162 38.4396 35.5304 37.7546 36.6416 36.642C37.7541 35.5304 38.4375 34.4145 38.95 33.0995C39.4417 31.8274 39.7792 30.3736 39.8792 28.2453C39.975 26.1119 40 25.4319 40 20.0002C40 14.5685 39.975 13.8868 39.8792 11.7535C39.7792 9.62427 39.4417 8.17092 38.95 6.89924C38.4375 5.58381 37.7541 4.46796 36.6416 3.35629C35.5291 2.24377 34.4166 1.56043 33.0999 1.05001C31.8249 0.555423 30.3707 0.218336 28.2415 0.120835C26.1082 0.0237506 25.429 0 19.9956 0H20.0019ZM18.2077 3.6042C18.7402 3.60337 19.3344 3.6042 20.0019 3.6042C25.3419 3.6042 25.9749 3.62337 28.0836 3.71921C30.0336 3.80837 31.092 4.13421 31.797 4.40796C32.7303 4.77047 33.3958 5.2038 34.0954 5.90381C34.7954 6.60382 35.2287 7.27049 35.592 8.20384C35.8658 8.90801 36.192 9.96635 36.2808 11.9164C36.3766 14.0247 36.3975 14.6581 36.3975 19.9956C36.3975 25.3332 36.3766 25.9665 36.2808 28.0749C36.1916 30.0249 35.8658 31.0832 35.592 31.7874C35.2295 32.7208 34.7954 33.3853 34.0954 34.0849C33.3953 34.7849 32.7308 35.2183 31.797 35.5808C31.0928 35.8558 30.0336 36.1808 28.0836 36.27C25.9753 36.3658 25.3419 36.3866 20.0019 36.3866C14.6614 36.3866 14.0285 36.3658 11.9201 36.27C9.9701 36.18 8.91176 35.8541 8.20634 35.5804C7.27299 35.2179 6.60632 34.7845 5.90631 34.0845C5.2063 33.3845 4.77297 32.7195 4.40963 31.7857C4.13588 31.0816 3.80962 30.0232 3.72087 28.0732C3.62504 25.9649 3.60587 25.3315 3.60587 19.9906C3.60587 14.6497 3.62504 14.0197 3.72087 11.9114C3.81004 9.96135 4.13588 8.90301 4.40963 8.198C4.77213 7.26466 5.2063 6.59798 5.90631 5.89798C6.60632 5.19797 7.27299 4.76463 8.20634 4.4013C8.91134 4.12629 9.9701 3.80129 11.9201 3.71171C13.7651 3.62837 14.4802 3.60337 18.2077 3.5992V3.6042ZM30.6778 6.92507C29.3528 6.92507 28.2778 7.99883 28.2778 9.32426C28.2778 10.6493 29.3528 11.7243 30.6778 11.7243C32.0028 11.7243 33.0778 10.6493 33.0778 9.32426C33.0778 7.99925 32.0028 6.92424 30.6778 6.92424V6.92507ZM20.0019 9.72927C14.3297 9.72927 9.73094 14.3281 9.73094 20.0002C9.73094 25.6723 14.3297 30.2691 20.0019 30.2691C25.674 30.2691 30.2711 25.6723 30.2711 20.0002C30.2711 14.3281 25.6736 9.72927 20.0015 9.72927H20.0019ZM20.0019 13.3335C23.6836 13.3335 26.6686 16.3181 26.6686 20.0002C26.6686 23.6819 23.6836 26.6669 20.0019 26.6669C16.3198 26.6669 13.3351 23.6819 13.3351 20.0002C13.3351 16.3181 16.3198 13.3335 20.0019 13.3335Z"
+                fill="black"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="mx-4 mt-1">
+          <a href="https://www.linkedin.com/in/ade-sopian-5544aa28b/" target="_blank">
+            <svg data-aos="fade-up" data-aos-duration="3000" class="cursor-pointer hover:w-[32px] transition-all duration-200 ease-in-out" width="30" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0 2.86535C0 1.28328 1.31503 0 2.93729 0H37.0627C38.6849 0 40 1.28329 40 2.86535V37.1347C40 38.7172 38.6849 40 37.0627 40L2.93729 40C1.31503 40 0 38.7172 0 37.1346V2.86535ZM12.3584 33.4841V15.4219H6.3549V33.4841H12.3584ZM9.35664 12.9558C11.4502 12.9558 12.7533 11.5688 12.7533 9.83551C12.7143 8.06317 11.4502 6.71468 9.39636 6.71468C7.34273 6.71468 6 8.06317 6 9.83551C6 11.5688 7.30279 12.9558 9.31751 12.9558H9.35664ZM21.6285 33.4841V23.3974C21.6285 22.8576 21.6675 22.3183 21.826 21.9324C22.26 20.8538 23.2479 19.7368 24.9064 19.7368C27.0788 19.7368 27.9478 21.3931 27.9478 23.8213V33.4841H33.9508V23.1275C33.9508 17.5796 30.989 14.9981 27.0391 14.9981C23.8544 14.9981 22.4265 16.7484 21.6287 17.9792V18.0414H21.5886C21.6018 18.0208 21.6151 18.0001 21.6287 17.9792V15.4219H15.6252C15.7039 17.1167 15.6252 33.4841 15.6252 33.4841H21.6285Z"
+                fill="black"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-3 mx-4 lg:pt-48">
+      <div class="flex flex-wrap">
+        <div class="container md:w-1/2 lg:ps-14">
+          <div class="particle">
+            <div class="w-[200px] h-[200px] bg-primary absolute -z-20 rounded-[100%] blur-[45px] left-[40%] lg:left-[22%]"></div>
+            <div class="w-[100px] h-[100px] bg-secondary absolute -z-20 rounded-[100%] blur-[25px] translate-y-[-60%] left-[20%] lg:left-[22%] lg:translat-y-[-50%]"></div>
+          </div>
+
+          <div class="container">
+            <div class="absolute -z-10 lg:left-[15%] lg:translate-y-[-30%]">
+              <img src="src/assets/pp4.png" width="500px" data-aos="fade-up" data-aos-duration="3000" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-[27rem] lg:translate-y-[-10%] lg:mt-0 lg:ms-14 md:w-1/3">
+          <div class="w-[250px] h-[250px] bg-secondary rounded-[100%] blur-[25px] absolute -z-20 translate-y-[20%]"></div>
+          <div class="w-[100px] h-[100px] bg-primary rounded-[100%] blur-[20px] absolute -z-20 left-[25%] translate-y-[25%]"></div>
+          <div class="bg-white/40 lg:mt-0 relative mt-24 py-6 px-6 shadow-md rounded-lg" data-aos="fade-up" data-aos-duration="3000">
+            <div class="">
+              <h1 id="welcome" class="font-bold text-3xl" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)">Welcome!</h1>
+              <h4 id="descTxt" class="text-base text-start" data-aos="fade-in" data-aos-duration="3000">
+                My name is Ade Sopian, a beginner web developer focusing on frontend development. Coming from Indonesia, I'm always excited to learn new things in the world of web programming. With dedication and hard work, I strive to
+                create a responsive and high quality website. I believe that continuous learning is the key to becoming a successful web developer, and I'm committed to continually improving my skills in delivering creative and effective
+                technological solutions. Let's explore the world of web together!
+              </h4>
+            </div>
+
+            <div class="mt-8">
+              <h1 id="edu" class="font-bold text-3xl" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)">Education</h1>
+              <h4 class="text-base" data-aos="fade-in" data-aos-duration="3000">SMK Negeri 1 Majalengka</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="mx-4 pt-24 pb-44">
+      <div class="container">
+        <div class="my-8 text-center">
+          <h4 class="font-semibold text-xl">Skills</h4>
+          <h1 class="font-bold text-3xl">These Are My Skills</h1>
+        </div>
+
+        <div class="lg:flex relative lg:justify-center">
+          <div class="w-full lg:w-1/3 mt-4 mx-4 bg-white/50 pt-4 pb-8 px-6 shadow-lg rounded-lg" data-aos="fade-right" data-aos-duration="2000">
+            <div class=""></div>
+            <h1 id="FE" class="font-bold text-xl text-center" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)">Front-End</h1>
+
+            <div class="flex relative items-center pt-6">
+              <div
+                class="mx-4 relative before:content-[attr(data-tip)] before:absolute before:px-4 before:py-2 before:left-1/2 before:max-w-xs before:-translate-x-1/2 before:text-gray-800 before:rounded-md before:bg-gray-300 before:opacity-0 before:transition-all before:translate-y-[65px] before:duration-500 before:font-medium after:absolute after:left-1/2 after:-top-0 after:h-0 after:w-0 after:-translate-x-1/2 after:translate-y-[50px] after:border-8 after:border-b-gray-300 after:border-l-transparent after:border-t-transparent after:border-r-transparent after:opacity-0 after:transition-all after:duration-500 hover:before:opacity-100 hover:after:opacity-100"
+                data-tip="Tailwind CSS"
+              >
+                <img src="src/assets/iconSkills/Tailwind.png" width="60" />
+              </div>
+
+              <div
+                class="mx-4 relative before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:max-w-xs before:-translate-x-1/2 before:text-gray-800 before:rounded-md before:bg-gray-300 before:opacity-0 before:transition-all before:translate-y-[65px] before:duration-500 before:font-medium after:absolute after:left-1/2 after:-top-0 after:h-0 after:w-0 after:-translate-x-1/2 after:translate-y-[50px] after:border-8 after:border-b-gray-300 after:border-l-transparent after:border-t-transparent after:border-r-transparent after:opacity-0 after:transition-all after:duration-500 hover:before:opacity-100 hover:after:opacity-100"
+                data-tip="Bootstrap"
+              >
+                <img src="src/assets/iconSkills/bootstrap-logo.png" width="60" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-1/3 mt-4 mx-4 bg-white/50 pt-4 pb-8 px-6 shadow-lg rounded-lg" data-aos="fade-left" data-aos-duration="2000">
+            <h1 id="BE" class="font-bold text-xl text-center" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)">Back-End</h1>
+
+            <div class="flex relative items-center pt-2">
+              <div
+                class="mx-4 relative before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:max-w-xs before:-translate-x-1/2 before:text-gray-800 before:rounded-md before:bg-gray-300 before:opacity-0 before:transition-all before:translate-y-[75px] before:duration-500 before:font-medium after:absolute after:left-1/2 after:-top-0 after:h-0 after:w-0 after:-translate-x-1/2 after:translate-y-[60px] after:border-8 after:border-b-gray-300 after:border-l-transparent after:border-t-transparent after:border-r-transparent after:opacity-0 after:transition-all after:duration-500 hover:before:opacity-100 hover:after:opacity-100"
+                data-tip="MySQL"
+              >
+                <img src="src/assets/iconSkills/mysql-logo.png" width="80" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:flex relative lg:justify-center mt-4">
+          <div class="w-full lg:w-1/3 mt-4 mx-4 bg-white/50 pt-4 pb-8 px-6 shadow-lg rounded-lg" data-aos="fade-right" data-aos-duration="2000">
+            <h1 id="Language" class="font-bold text-xl text-center" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)">Language</h1>
+
+            <div class="relative flex items-center pt-6">
+              <div
+                class="mx-4 relative before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:max-w-xs before:-translate-x-1/2 before:text-gray-800 before:rounded-md before:bg-gray-300 before:opacity-0 before:transition-all before:translate-y-[70px] before:duration-500 before:font-medium after:absolute after:left-1/2 after:-top-0 after:h-0 after:w-0 after:-translate-x-1/2 after:translate-y-[55px] after:border-8 after:border-b-gray-300 after:border-l-transparent after:border-t-transparent after:border-r-transparent after:opacity-0 after:transition-all after:duration-500 hover:before:opacity-100 hover:after:opacity-100"
+                data-tip="HTML5"
+              >
+                <img src="src/assets/iconSkills/HTML5.png" width="60" alt="" />
+              </div>
+
+              <div
+                class="mx-4 relative before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:max-w-xs before:-translate-x-1/2 before:text-gray-800 before:rounded-md before:bg-gray-300 before:opacity-0 before:transition-all before:translate-y-[65px] before:duration-500 before:font-medium after:absolute after:left-1/2 after:-top-0 after:h-0 after:w-0 after:-translate-x-1/2 after:translate-y-[50px] after:border-8 after:border-b-gray-300 after:border-l-transparent after:border-t-transparent after:border-r-transparent after:opacity-0 after:transition-all after:duration-500 hover:before:opacity-100 hover:after:opacity-100"
+                data-tip="CSS3"
+              >
+                <img src="src/assets/iconSkills/CSS3.png" width="45" alt="" />
+              </div>
+
+              <div
+                class="mx-4 relative before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:max-w-xs before:-translate-x-1/2 before:text-gray-800 before:rounded-md before:bg-gray-300 before:opacity-0 before:transition-all before:translate-y-[65px] before:duration-500 before:font-medium after:absolute after:left-1/2 after:-top-0 after:h-0 after:w-0 after:-translate-x-1/2 after:translate-y-[50px] after:border-8 after:border-b-gray-300 after:border-l-transparent after:border-t-transparent after:border-r-transparent after:opacity-0 after:transition-all after:duration-500 hover:before:opacity-100 hover:after:opacity-100"
+                data-tip="JavaScript"
+              >
+                <img src="src/assets/iconSkills/JavaScript.png" width="41" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-1/3 mt-4 mx-4 bg-white/50 pt-4 pb-8 px-6 shadow-xl rounded-lg" data-aos="fade-left" data-aos-duration="2000">
+            <h1 id="Other" class="font-bold text-xl text-center" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)">Other</h1>
+
+            <div class="flex relative items-center pt-6">
+              <div
+                class="mx-4 relative before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:max-w-xs before:-translate-x-1/2 before:text-gray-800 before:rounded-md before:bg-gray-300 before:opacity-0 before:transition-all before:translate-y-[75px] before:duration-500 before:font-medium after:absolute after:left-1/2 after:-top-0 after:h-0 after:w-0 after:-translate-x-1/2 after:translate-y-[60px] after:border-8 after:border-b-gray-300 after:border-l-transparent after:border-t-transparent after:border-r-transparent after:opacity-0 after:transition-all after:duration-500 hover:before:opacity-100 hover:after:opacity-100"
+                data-tip="Figma"
+              >
+                <img src="src/assets/iconSkills/Figma.png" width="55" alt="" />
+              </div>
+
+              <div
+                class="mx-4 relative before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:max-w-xs before:-translate-x-1/2 before:text-gray-800 before:rounded-md before:bg-gray-300 before:opacity-0 before:transition-all before:translate-y-[75px] before:duration-500 before:font-medium after:absolute after:left-1/2 after:-top-0 after:h-0 after:w-0 after:-translate-x-1/2 after:translate-y-[60px] after:border-8 after:border-b-gray-300 after:border-l-transparent after:border-t-transparent after:border-r-transparent after:opacity-0 after:transition-all after:duration-500 hover:before:opacity-100 hover:after:opacity-100"
+                data-tip="Git"
+              >
+                <img src="src/assets/iconSkills/Git.png" width="60" alt="" />
+              </div>
+
+              <div class="mx-4">
+                <img src="" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificate" class="pt-36 pb-44 mx-4 lg:mx-16">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-xl mb-2">Certificate</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4">Awards and Achievement</h2>
+          </div>
+        </div>
+
+        <div class="w-[130px] h-[130px] bg-secondary rounded-[100%] blur-[35px] absolute -z-20 translate-y-[300%] lg:left-[20%]"></div>
+        <div class="w-[75px] h-[75px] bg-secondary rounded-[100%] blur-[25px] absolute -z-20 translate-y-[1000%] left-[30%] lg:translate-y-[30%] lg:left-[5%]"></div>
+        <div class="w-[50px] h-[50px] bg-primary rounded-[100%] blur-[20px] absolute -z-20 translate-y-[1800%] lg:left-[80%] lg:translate-y-[10%]"></div>
+        <div class="w-[100px] h-[100px] bg-secondary rounded-[100%] blur-[25px] absolute -z-20 translate-y-[1200%] left-[50%] lg:translate-y-[380%] lg:left-[70%]"></div>
+        <svg class="absolute -z-20 blur-[50px] lg:scale-50 lg:translate-y-[-40%]" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill="#00AFB9"
+            d="M13.5,-25.4C15.6,-19.6,14.2,-12.7,27.1,-6.1C40,0.6,67.2,7.1,75.2,16.9C83.3,26.7,72.1,39.8,61,53.2C49.9,66.6,38.7,80.3,28,73.5C17.2,66.7,6.8,39.4,-4,29.1C-14.9,18.9,-26.2,25.7,-41.8,26C-57.4,26.3,-77.4,20.2,-79.5,10.9C-81.6,1.7,-66,-10.6,-56.4,-23.4C-46.9,-36.1,-43.5,-49.2,-35.1,-52.2C-26.7,-55.2,-13.3,-48.1,-3.8,-42.1C5.7,-36.1,11.3,-31.3,13.5,-25.4Z"
+            transform="translate(100 100)"
+          />
+        </svg>
+
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/3 hover:scale-[1.02] transition-all duration-150 ease-in-out">
+            <div class="bg-white/50 rounded-xl shadow-lg px-4 py-4 mb-10" data-aos="fade-up" data-aos-duration="2000">
+              <img src="src/assets/Certificate/GameLab_certificate2.jpg" alt="GAMELAB - HTML, CSS, dan JavaScript" class="w-full" />
+              <div class="flex gap-[48%] lg:gap-[52%] px-4 pt-1">
+                <p>Non-Academy</p>
+                <p class="">Dec, 2023</p>
+              </div>
+              <div class="py-8 px-4">
+                <h3 class="block font-bold mb-3 text-xl text-dark truncate">GAMELAB - HTML, CSS, dan JavaScript</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/3 hover:scale-[1.02] transition-all duration-150 ease-in-out">
+            <div class="bg-white/50 rounded-xl shadow-lg px-4 py-7 mb-10" data-aos="fade-up" data-aos-duration="2000">
+              <img src="src/assets/Certificate/HTML Basic.png" alt="W3Docs - HTML Basic" class="w-full" />
+              <div class="flex gap-[48%] lg:gap-[52%] px-4 pt-1">
+                <p>Non-Academy</p>
+                <p class="">Feb, 2024</p>
+              </div>
+              <div class="py-8 px-4">
+                <h3 class="block font-bold mb-3 text-xl text-dark truncate">W3Docs - HTML Basic</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/3 hover:scale-[1.02] transition-all duration-150 ease-in-out">
+            <div class="bg-white/50 rounded-xl shadow-lg px-4 py-7 mb-10" data-aos="fade-up" data-aos-duration="2000">
+              <img src="src/assets/Certificate/CSS Basic.png" alt="W3Docs - CSS Basic" class="w-full" />
+              <div class="flex gap-[48%] lg:gap-[52%] px-4 pt-1">
+                <p>Non-Academy</p>
+                <p class="">Feb, 2024</p>
+              </div>
+              <div class="py-8 px-4">
+                <h3 class="block font-bold mb-3 text-xl text-dark truncate">W3Docs -CSS Basic</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="pt-36 pb-[20rem] mx-4 lg:mx-16">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-xl mb-2">Project</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4">Here's my projects</h2>
+          </div>
+        </div>
+
+        <div class="w-[130px] h-[130px] bg-primary rounded-[100%] blur-[35px] absolute -z-20 translate-y-[300%] lg:left-[20%]"></div>
+        <div class="w-[75px] h-[75px] bg-primary rounded-[100%] blur-[25px] absolute -z-20 translate-y-[1000%] left-[30%] lg:translate-y-[30%] lg:left-[5%]"></div>
+        <div class="w-[50px] h-[50px] bg-secondary rounded-[100%] blur-[20px] absolute -z-20 translate-y-[1800%] lg:left-[80%] lg:translate-y-[10%]"></div>
+        <div class="w-[100px] h-[100px] bg-primary rounded-[100%] blur-[25px] absolute -z-20 translate-y-[1200%] left-[50%] lg:translate-y-[380%] lg:left-[70%]"></div>
+        <svg class="absolute rotate-12 -z-20 blur-[50px] lg:scale-50 lg:translate-y-[-40%]" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill="#F07167"
+            d="M13.5,-25.4C15.6,-19.6,14.2,-12.7,27.1,-6.1C40,0.6,67.2,7.1,75.2,16.9C83.3,26.7,72.1,39.8,61,53.2C49.9,66.6,38.7,80.3,28,73.5C17.2,66.7,6.8,39.4,-4,29.1C-14.9,18.9,-26.2,25.7,-41.8,26C-57.4,26.3,-77.4,20.2,-79.5,10.9C-81.6,1.7,-66,-10.6,-56.4,-23.4C-46.9,-36.1,-43.5,-49.2,-35.1,-52.2C-26.7,-55.2,-13.3,-48.1,-3.8,-42.1C5.7,-36.1,11.3,-31.3,13.5,-25.4Z"
+            transform="translate(100 100)"
+          />
+        </svg>
+
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/3 hover:scale-[1.02] transition-all duration-150 ease-in-out">
+            <div class="bg-white/50 rounded-xl shadow-lg overflow-hidden mb-10" data-aos="fade-up" data-aos-duration="2000">
+              <img src="src/assets/projectAssets/project1.jpg" alt="Personal Website | Ade Sopian" class="w-full" />
+              <div class="flex px-4 pt-1">
+                <p class="font-medium">Ongoing</p>
+                <p class="font-medium ms-[14rem] md:ms-[32rem] lg:ms-[13.5rem]">March, 2024</p>
+              </div>
+
+              <div class="pt-4 pb-4 px-4">
+                <h3><a href="index.html" class="block font-semibold mb-1 text-xl text-dark truncate hover:text-primary">Personal Website | Ade Sopian</a></h3>
+                <p class="text-base mb-6 font-medium text-gray-900">A portfolio website to showcase my projects and works in various fields such as web development, graphic design, and content writing.</p>
+              </div>
+
+              <div class="px-4 pb-3 mt-2">
+                <img class="relative" src="src/assets/Tailwind.png" width="30" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/3 hover:scale-[1.02] transition-all duration-150 ease-in-out">
+            <div class="bg-white/50 rounded-xl shadow-lg overflow-hidden mb-10" data-aos="fade-up" data-aos-duration="2000">
+              <img src="src/assets/projectAssets/project2.jpg" alt="SMKN 1 Majalengka" class="w-full" />
+              <div class="flex px-4 pt-1">
+                <p class="font-medium">On Progress</p>
+                <p class="font-medium ms-[14rem] md:ms-[32rem] lg:ms-[13.5rem]">Dec, 2023</p>
+              </div>
+
+              <div class="pt-4 pb-4 px-4">
+                <h3><a href="https://stemanika-website-chi.vercel.app/" target="_blank" class="block font-semibold mb-1 text-xl text-dark truncate hover:text-primary">SMKN 1 Majalengka</a></h3>
+                <p class="text-base font-medium text-gray-900">A straightforward school website has been developed as part of meeting the requirements for a web programming assignment assigned by the school.</p>
+              </div>
+
+              <div class="mt-2 px-4 pb-3">
+                <img src="src/assets/Tailwind.png" width="30" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/3 hover:scale-[1.02] transition-all duration-150 ease-in-out">
+            <div class="bg-white/50 rounded-xl shadow-lg overflow-hidden mb-10" data-aos="fade-up" data-aos-duration="2000">
+              <img src="src/assets/projectAssets/project3.jpg" alt="SMKN 1 Majalengka" class="w-full" />
+              <div class="flex px-4 pt-1">
+                <p class="font-medium">On Progress</p>
+                <p class="font-medium ms-[14rem] md:ms-[32rem] lg:ms-[13.5rem]">Jan, 2024</p>
+              </div>
+
+              <div class="pt-4 pb-6 px-4">
+                <h3><a href="https://sale-cau-mah-neng.vercel.app/" target="_blank" class="block font-semibold mb-1 text-xl text-dark truncate hover:text-primary">Sale Cau Mah Neng - Food Website</a></h3>
+                <p class="text-base font-medium text-gray-900">I've developed a straightforward website for a snack brand called Sale Cau Mah Neng. It's designed to showcase the brand's products and boost brand recognition online.</p>
+              </div>
+
+              <div class="px-4 pb-3">
+                <img src="src/assets/Tailwind.png" width="30" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="pb-4">
+          <h1 class="font-semibold text-gray-400 text-center">All Rights Reserved | Ade Sopian</h1>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#typed", {
+        strings: ["Web Developer", "Front-End Developer", "Web Developer"],
+        typeSpeed: 130,
+        backSpeed: 130,
+      });
+
+      AOS.init();
+
+      let text = new SplitType("#text");
+      let txtWelcome = new SplitType("#welcome");
+      let txtEdu = new SplitType("#edu");
+      let txtFE = new SplitType("#FE");
+      let txtBE = new SplitType("#BE");
+      let txtLanguage = new SplitType("#Language");
+      let txtOther = new SplitType("#Other");
+
+      let character = document.querySelectorAll(".char");
+
+      for (i = 0; i < character.length; i++) {
+        character[i].classList.add("translate-y-full");
+      }
+
+      gsap.to(".char", {
+        y: 0,
+        stagger: 0.09,
+        delay: 0.2,
+        duration: 0.5,
+      });
+    </script>
+  </body>
+</html>
